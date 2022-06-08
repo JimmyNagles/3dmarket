@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import Home from "./market";
+import Market from "./market/index";
 
 export default function CollectionsPage() {
   return (
@@ -11,7 +11,7 @@ export default function CollectionsPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Home></Home>
+      <Market></Market>
     </div>
   );
 }

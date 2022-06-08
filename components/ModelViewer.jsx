@@ -1,6 +1,6 @@
 import "@google/model-viewer";
 
-const ModelViewerComp = ({ glb = "" }) => (
+const ModelViewer = ({ glb = "" }) => (
   <div className="w-full h-full">
     <model-viewer
       src={glb}
