@@ -6,7 +6,7 @@ const Model = dynamic(() => import("../../../components/ModelViewer"), {
   ssr: false,
 });
 import ItemCard from "../../../components/Cards/ItemCard";
-import CollectionBar from "../../../components/Collections/collectionBar";
+import CollectionBar from "../../../components/Collections/CollectionBar";
 const CollectionPage = ({ collection }) => {
   return (
     <div>
