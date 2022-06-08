@@ -1,6 +1,6 @@
 import "@google/model-viewer";
 
-const ModelViewer = ({ glb = "" }) => (
+const ModelViewer = ({ glb = "/models/plant.glb" }) => (
   <div className="w-full h-full">
     <model-viewer
       src={glb}
@@ -14,4 +14,4 @@ const ModelViewer = ({ glb = "" }) => (
   </div>
 );
 
-export default Model;
+export default ModelViewer;

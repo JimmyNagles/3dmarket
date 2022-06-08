@@ -15,7 +15,7 @@ const CollectionCard = ({
       <div className="h-[60px] p-2 ">
         <Link
           href={{
-            pathname: "/vendingmachine/[collection]/",
+            pathname: "/market/[collection]/",
             query: {
               EventNFT: CollectionName,
               id: CollectinId,
