@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 // import logoo from "../../public/placeholder.png";
 // import MetamaskBtn from "../MetamaskBtn";
@@ -16,7 +17,7 @@ const Nav = () => {
       <nav className="flex flex-row p-2 justify-between">
         {/* LOGO  */}
         <div className="flex flex-row p-2 ">
-          <a href="/">
+          <div href="/">
             {/* <Image
               className="bg-black m-2 p-2  rounded"
               height="50"
@@ -24,7 +25,7 @@ const Nav = () => {
               src={logoo}
               alt="NFT Logo"
             /> */}
-          </a>
+          </div>
         </div>
 
         {/* links and btn for mobile */}
@@ -38,13 +39,19 @@ const Nav = () => {
 
           <ul className={"hidden md:flex md:flex-row p-2 "}>
             <li className="m-2 hover:underline underline-red ">
-              <a href="/">Home</a>
+              <Link passHref href={"/"}>
+                <p>Home</p>
+              </Link>
             </li>
             <li className="m-2 hover:underline ">
-              <a href="/vendingmachine//about">About</a>
+              <Link passHref href={"/about"}>
+                <p>About</p>
+              </Link>
             </li>
             <li className="m-2 hover:underline ">
-              <a href="/vendingmachine/dashboard">dashboard</a>
+              <Link passHref href={"/dashboard"}>
+                <p>dashboard</p>
+              </Link>
             </li>
             {/* <li className="m-2 hover:underline ">
               <MetamaskBtn></MetamaskBtn>
@@ -64,10 +71,14 @@ const Nav = () => {
           <MetamaskBtn></MetamaskBtn>
         </li> */}
         <li className="m-2 hover:underline underline-red ">
-          <a href="/">Home</a>
+          <Link passHref href={"/"}>
+            <p>Home</p>
+          </Link>
         </li>
         <li className="m-2 hover:underline ">
-          <a href="/about">About</a>
+          <Link passHref href={"/about"}>
+            <p>About</p>
+          </Link>
         </li>
       </ul>
     </div>
