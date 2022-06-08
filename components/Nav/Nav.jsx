@@ -50,7 +50,7 @@ const Nav = () => {
             </li>
             <li className="m-2 hover:underline ">
               <Link passHref href={"/dashboard"}>
-                <p>dashboard</p>
+                <p>Dashboard</p>
               </Link>
             </li>
             {/* <li className="m-2 hover:underline ">
@@ -78,6 +78,11 @@ const Nav = () => {
         <li className="m-2 hover:underline ">
           <Link passHref href={"/about"}>
             <p>About</p>
+          </Link>
+        </li>
+        <li className="m-2 hover:underline ">
+          <Link passHref href={"/dashboard"}>
+            <p>Dashboard</p>
           </Link>
         </li>
       </ul>
