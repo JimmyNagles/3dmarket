@@ -46,7 +46,7 @@ const ItemCard = ({
           isFlipped ? "w-[200px] h-[240px] flex flex-col p-2 " : "hidden"
         }
       >
-        <h1 className=" text-lg">Date:6/13/2022 </h1>
+        <h1 className=" text-lg">Date: TBD </h1>
         <h1 className=" text-lg">Claimed? {NFTClaimed ? "Yes" : "No yet"}</h1>
         <h1 className=" text-lg">owners? 1</h1>
         <h1 className=" text-lg">Future Util? {NFTUtil ? "Yes" : "No yet"}</h1>

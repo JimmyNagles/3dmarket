@@ -21,7 +21,13 @@ const Market = () => {
           CollecitonGlb="/models/plant.glb"
           CollectinId={1}
           CollectionName={"Rock 0"}
-          ModelComp={<ModelView glb="/models/plant.glb"></ModelView>}
+          ModelComp={<ModelView glb="/models/monsteraltar.glb"></ModelView>}
+        />
+        <CollectionCard
+          CollecitonGlb="/models/plant.glb"
+          CollectinId={0}
+          CollectionName={"Rock 1"}
+          ModelComp={<ModelView glb="/models/monsterking.glb"></ModelView>}
         />
         <CollectionCard
           CollecitonGlb="/models/plant.glb"
