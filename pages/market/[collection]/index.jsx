@@ -21,10 +21,10 @@ const CollectionPage = ({ collection }) => {
         <div className="h-[200px] bg-black"></div>
         {/*first section  */}
         <div className="absolute w-[200px] h-[200px] rounded-full bg-white border border-black top-40 left-1/2 transform -translate-x-1/2">
-          <ProfileCircle glb={"/models/plant.glb"}></ProfileCircle>
+          <ProfileCircle glb={collection.glb}></ProfileCircle>
         </div>
         {/*second section  */}
-        <div className="h-[250px]  p-2 flex flex-col items-center justify-center">
+        <div className="h-[250px]  p-2 flex flex-col items-center justify-center mt-6">
           <h1 className="text-3xl  ">Collection Name</h1>
           <h1 className="text-xl  ">Created by userName </h1>
         </div>
@@ -40,15 +40,17 @@ const CollectionPage = ({ collection }) => {
 
         <div className="flex flex-col justify-center items-center  h-[200px]">
           <h2>Information About the EventNFT</h2>
+          {collection.glb}
+          {collection.id}
         </div>
 
         {/* all the NFTs in the collection */}
         <div className="min-h-[300px] p-4 flex flex-col items-center md:grid md:grid-cols-4 mt-10 ">
           <ItemCard
-            CollectionId={0}
-            NFTId={1}
+            CollectionId={collection.id}
+            NFTId={collection.NFTId}
             NFTPrice={50}
-            glb={"/models/plant.glb"}
+            NFTGlb={collection.glb}
           ></ItemCard>
         </div>
       </div>
@@ -61,7 +63,8 @@ export const getServerSideProps = async ({ query, params, req }) => {
   //get array of all items in collection
   //add them to item
   //render a card for each
-  console.log(query.collection);
+  console.log("collection", query.collection);
+  console.log("collectionID", query.id);
 
   return {
     props: {
@@ -69,6 +72,7 @@ export const getServerSideProps = async ({ query, params, req }) => {
       collection: {
         glb: query.collection,
         id: query.id,
+        NFTId: query.id,
         NFTname: query.EventNFT,
       },
     },

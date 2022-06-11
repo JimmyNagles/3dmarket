@@ -8,6 +8,7 @@ const ModelView = dynamic(() => import("../../components/ModelViewer"), {
   ssr: false,
 });
 const Market = () => {
+  //array with all file paths
   const GlbArr = [
     "1.glb",
     "2.glb",
@@ -17,6 +18,13 @@ const Market = () => {
     "6.glb",
     "7.glb",
     "8.glb",
+    "9.glb",
+    "10.glb",
+    "11.glb",
+    "12.glb",
+    "13.glb",
+    "14.glb",
+    "15.glb",
   ];
 
   return (
@@ -28,6 +36,7 @@ const Market = () => {
       </Head>
 
       <CollectionsGrid>
+        {/* loops through array  */}
         {GlbArr.map((file, index) => {
           return (
             <CollectionCard
