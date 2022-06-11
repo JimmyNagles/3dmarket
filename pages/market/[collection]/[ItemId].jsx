@@ -34,8 +34,6 @@ const NFTPage = ({ itemid }) => {
             </div>
           </div>
         </div>
-
-        <h1>ID:{itemid.id}</h1>
       </div>
     </div>
   );
