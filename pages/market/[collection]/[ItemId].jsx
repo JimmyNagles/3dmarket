@@ -30,7 +30,7 @@ const NFTPage = ({ itemid }) => {
               </div>
             </div>
             <div className=" flex flex-col justify-center items-center  hover:bg-black hover:shadow-2xl p-4 ">
-              <Model></Model>
+              <Model glb={itemid.glb}></Model>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ export const getServerSideProps = async ({ query, params, req }) => {
   return {
     props: {
       // item: items.find((i) => i.name === params?.collection),
-      itemid: { id: query.itemid },
+      itemid: { id: query.itemid, glb: query.glb },
     },
   };
 };

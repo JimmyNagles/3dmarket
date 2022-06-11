@@ -7,7 +7,7 @@ const Model = dynamic(() => import("../ModelViewer"), {
 
 const ItemCard = ({
   CollectionId = 0,
-  NFTGlb = "/models/plant.glb",
+  NFTGlb = "/models/1.glb",
   NFTPrice = 50,
   NFTId = 1,
   NFTDate = 0,
@@ -23,7 +23,7 @@ const ItemCard = ({
   useEffect(() => {}, [isFlipped]);
 
   return (
-    <div className="w-[200px] h-[250px] m-4 shadow-2xl">
+    <div className="w-[200px] min-h-[250px]  m-4 shadow-2xl">
       <div className="grid grid-cols-2 ">
         <div className="p-2">
           <h1>
@@ -67,7 +67,7 @@ const ItemCard = ({
         </div>
       </div>
       <div className={isFlipped ? "hidden" : "w-[200px] h-[200px]"}>
-        <Model></Model>
+        <Model glb={NFTGlb}></Model>
       </div>
     </div>
   );
