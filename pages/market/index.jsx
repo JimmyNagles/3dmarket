@@ -25,6 +25,10 @@ const Market = () => {
     "13.glb",
     "14.glb",
     "15.glb",
+    "16.glb",
+    "17.glb",
+    "18.glb",
+    "19.glb",
   ];
 
   return (
