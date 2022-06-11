@@ -32,16 +32,14 @@ const CollectionPage = ({ collection }) => {
         {/* Third section */}
         <div className="flex flex-col justify-center items-center  h-[100px]">
           <CollectionBar
-            TotalNFTs={150}
+            TotalNFTs={1}
             NFTFloor={50}
-            ListedNFTs={2}
+            ListedNFTs={1}
           ></CollectionBar>
         </div>
 
         <div className="flex flex-col justify-center items-center  h-[200px]">
           <h2>Information About the EventNFT</h2>
-          {collection.glb}
-          {collection.id}
         </div>
 
         {/* all the NFTs in the collection */}

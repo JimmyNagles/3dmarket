@@ -1,6 +1,6 @@
 import React from "react";
 
-const Collectionbar = ({ NFTFloor = 50, TotalNFTs = 150, ListedNFTs = 20 }) => {
+const Collectionbar = ({ NFTFloor = 0, TotalNFTs = 1, ListedNFTs = 1 }) => {
   return (
     <div className="border-2  border-black w-[200px] md:w-[400px] h-[80px] grid grid-cols-3 ">
       <div className="h-full flex flex-col justify-center items-center">
