@@ -8,6 +8,17 @@ const ModelView = dynamic(() => import("../../components/ModelViewer"), {
   ssr: false,
 });
 const Market = () => {
+  const GlbArr = [
+    "1.glb",
+    "2.glb",
+    "3.glb",
+    "4.glb",
+    "5.glb",
+    "6.glb",
+    "7.glb",
+    "8.glb",
+  ];
+
   return (
     <div className="">
       <Head>
@@ -17,24 +28,17 @@ const Market = () => {
       </Head>
 
       <CollectionsGrid>
-        <CollectionCard
-          CollecitonGlb="/models/plant.glb"
-          CollectinId={1}
-          CollectionName={"Rock 0"}
-          ModelComp={<ModelView glb="/models/monsteraltar.glb"></ModelView>}
-        />
-        <CollectionCard
-          CollecitonGlb="/models/plant.glb"
-          CollectinId={0}
-          CollectionName={"Rock 1"}
-          ModelComp={<ModelView glb="/models/monsterking.glb"></ModelView>}
-        />
-        <CollectionCard
-          CollecitonGlb="/models/plant.glb"
-          CollectinId={0}
-          CollectionName={"Rock 1"}
-          ModelComp={<ModelView glb="/models/plant.glb"></ModelView>}
-        />
+        {GlbArr.map((file, index) => {
+          return (
+            <CollectionCard
+              key={index}
+              CollecitonGlb={`/models/${file}`}
+              CollectinId={index + 1}
+              CollectionName={"Rock 0"}
+              ModelComp={<ModelView glb={`/models/${file}`}></ModelView>}
+            />
+          );
+        })}
       </CollectionsGrid>
     </div>
   );
