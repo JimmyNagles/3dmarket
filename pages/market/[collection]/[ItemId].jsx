@@ -21,10 +21,10 @@ const NFTPage = ({ itemid }) => {
 
       <div
         className={
-          isTabOpen ? "min-h-screen absolute  md:left-2/4 " : " hidden"
+          isTabOpen ? "min-h-screen absolute   md:left-2/4 " : " hidden"
         }
       >
-        <div className="w-[300px] md:w-[400px] lg:w-[600px] min-h-screen bg-opacity-70 bg-black text-white  p-2 z-10 relative">
+        <div className="w-full md:w-[400px] lg:w-[600px] min-h-screen bg-opacity-70 bg-black text-white  p-2 z-10 relative">
           <div className="w-full min-h-screen flex flex-col justify-center">
             <div className="min-h-[200px] p-2 flex flex-col items-center">
               <h1 className=" text-xl p-2">Current BID Price</h1>

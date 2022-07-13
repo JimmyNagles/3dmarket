@@ -5,10 +5,12 @@ const ModelViewer = ({ glb = "/models/3.glb" }) => (
     <model-viewer
       src={glb}
       ios-src=""
-      alt="Genesis NFT"
+      alt="Rocks "
       shadow-intensity="1"
       camera-controls
       auto-rotate
+      rotation-per-second="30deg"
+      ar-modes="scene-viewer webxr"
       ar
     ></model-viewer>
   </div>
