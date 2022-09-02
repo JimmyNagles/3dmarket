@@ -4,6 +4,9 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import CollectionsGrid from "../../components/Grid/CollectionsGrid";
 import CollectionCard from "../../components/Cards/CollectionCard";
+import { ThreeScene } from "../../components/three/ThreeScene";
+
+import useRefs from "react-use-refs";
 const ModelView = dynamic(() => import("../../components/ModelViewer"), {
   ssr: false,
 });
@@ -38,10 +41,18 @@ const Market = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="min-h-screen ">
+      <div className="min-h-screen w-full flex justify-center items-center flex-col ">
         {/*connect metamask  */}
         {/*render nfts!  */}
         {/*  */}
+
+        <div className="w-[300px] md:w-[90%] h-[100vh] mt-2 bg-black">
+          <ThreeScene></ThreeScene>
+        </div>
+
+        <div className="w-[300px] bg-black h-[500px]">
+          <ModelView></ModelView>
+        </div>
       </div>
 
       <CollectionsGrid>
