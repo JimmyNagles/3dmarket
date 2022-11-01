@@ -1,7 +1,7 @@
 import "@google/model-viewer";
 
 const ModelViewer = ({
-  glb = "/models/3.glb",
+  glb = "/models/97.glb",
   exposure = ".8",
   shadowIntensity = "1",
   autoRotate = "false",
