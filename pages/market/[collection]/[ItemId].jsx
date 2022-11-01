@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
+
 import dynamic from "next/dynamic";
 const Model = dynamic(() => import("../../../components/ModelViewer"), {
   ssr: false,
 });
+
 const NFTPage = ({ itemid }) => {
   const [isTabOpen, setisTabOpen] = useState(false);
 
@@ -21,20 +23,20 @@ const NFTPage = ({ itemid }) => {
 
       <div
         className={
-          isTabOpen ? "min-h-screen absolute   md:left-2/4 " : " hidden"
+          isTabOpen ? "min-h-screen absolute  md:left-2/4 " : " hidden"
         }
       >
-        <div className="w-full md:w-[400px] lg:w-[600px] min-h-screen bg-opacity-70 bg-black text-white  p-2 z-10 relative">
+        <div className="w-[300px] md:w-[400px] lg:w-[600px] min-h-screen bg-opacity-80 bg-black text-white  p-2 z-10 relative">
           <div className="w-full min-h-screen flex flex-col justify-center">
             <div className="min-h-[200px] p-2 flex flex-col items-center">
               <h1 className=" text-xl p-2">Current BID Price</h1>
               <h1 className=" text-xl p-2">1 ETH </h1>
               <input
                 type="number"
-                className="w-3/4 m-2 p-2 bg-white bg-opacity-70 border-slate-900 focus:border-red-600  "
+                className="w-3/4 m-2 p-2  bg-white text-black    "
               ></input>
               <button
-                className="w-3/4 m-2 bg-white text-black hover:bg-white bg-opacity-70 p-2 "
+                className="w-3/4 m-2 bg-white text-black hover:bg-white  p-2 "
                 onClick={() => {}}
               >
                 Place Bid
@@ -42,7 +44,7 @@ const NFTPage = ({ itemid }) => {
               <h1 className=" text-xl p-2">Buy Now Price</h1>
               <h1 className=" text-xl p-2">50 ETH </h1>
               <button
-                className="bg-white m-2 w-3/4 hover:bg-white text-black bg-opacity-70 p-2 "
+                className="bg-white m-2 w-3/4 hover:bg-white text-black  p-2 "
                 onClick={() => {}}
               >
                 Buy Now
@@ -50,7 +52,7 @@ const NFTPage = ({ itemid }) => {
             </div>
             {/* closes tab */}
             <button
-              className="bg-white text-black bg-opacity-70 p-2 m-2 "
+              className="bg-white text-black  p-2 m-2 "
               onClick={() => {
                 setisTabOpen(!isTabOpen);
               }}
@@ -64,8 +66,8 @@ const NFTPage = ({ itemid }) => {
       {/* content */}
       <div className="min-h-screen">
         <div className="flex justify-center">
-          <div className="grid grid-cols-2  w-[900px]   min-h-screen ">
-            <div className="flex flex-col  justify-center">
+          <div className="grid grid-cols-1 md:grid md:grid-cols-2  w-[900px]   min-h-screen ">
+            <div className="flex flex-col  justify-center order-2 md:order-1 ">
               <div className="w-full hover:shadow-2xl h-[150px] p-4">
                 <h1>Owner</h1>
                 <h1>ID:{itemid.id}</h1>
@@ -86,7 +88,7 @@ const NFTPage = ({ itemid }) => {
                 <h1>Transactions</h1>
               </div>
             </div>
-            <div className=" flex flex-col justify-center items-center  hover:bg-black hover:shadow-2xl p-4 ">
+            <div className="order-1 md:order-2  flex flex-col justify-center h-[300px] md:min-h-full items-center  hover:bg-black hover:shadow-2xl p-4 ">
               <Model glb={itemid.glb}></Model>
             </div>
           </div>
