@@ -18,8 +18,8 @@ import GlbModel from "./GlbModel";
 
 export const ThreeScene = () => {
   const GlbArr = [
-    { glb: "19.glb", rotationSpeed: 0.01, scale: 2, position: [1, 1, 1] },
-    { glb: "1.glb", rotationSpeed: 0.01, scale: 2, position: [20, 20, 20] },
+    { glb: "97.glb", rotationSpeed: 0.01, scale: 2, position: [20, 20, 20] },
+    { glb: "1.glb", rotationSpeed: 0.01, scale: 2, position: [0, 0, 0] },
     {
       glb: "3.glb",
       rotationSpeed: 0.01,
@@ -37,7 +37,7 @@ export const ThreeScene = () => {
       glb: "6.glb",
       rotationSpeed: 0.01,
       scale: 2,
-      position: [5, 5, 5],
+      position: [15, 15, 15],
     },
     {
       glb: "7.glb",
@@ -46,7 +46,7 @@ export const ThreeScene = () => {
       position: [-150, -150, 10],
     },
     { glb: "8.glb", rotationSpeed: 0.01, scale: 2, position: [0, 0, 45] },
-    { glb: "10.glb", rotationSpeed: 0.01, scale: 2, position: [0, -100, -900] },
+    // { glb: "10.glb", rotationSpeed: 0.01, scale: 2, position: [0, -100, -900] },
     // { glb: "10.glb", rotationSpeed: 0.01, scale: 2, position: [0, 0, 0] },
     // { glb: "11.glb", rotationSpeed: 0.01, scale: 2, position: [0, 0, 0] },
     // { glb: "12.glb", rotationSpeed: 0.01, scale: 2, position: [0, 0, 0] },
@@ -65,10 +65,9 @@ export const ThreeScene = () => {
         shadows={true}
         className={"canvas"}
         camera={{
-          position: [-7, 7, 7],
+          position: [7, 7, 7],
         }}
       >
-        <ambientLight intensity={2} />
         <spotLight
           intensity={0.5}
           angle={0.1}
@@ -76,7 +75,7 @@ export const ThreeScene = () => {
           position={[10, 15, 10]}
           castShadow
         />
-
+        <ambientLight intensity={0.5} />
         <CameraControls></CameraControls>
 
         {/* <ThreeGlbs
@@ -100,7 +99,7 @@ export const ThreeScene = () => {
                 GlbObj.position[2],
               ]}
               glb={`/models/${GlbObj.glb}`}
-            />
+            ></ThreeGlbs>
           );
         })}
       </Canvas>
