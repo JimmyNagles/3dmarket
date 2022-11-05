@@ -18,7 +18,7 @@ import GlbModel from "./GlbModel";
 
 export const ThreeScene = () => {
   const GlbArr = [
-    { glb: "97.glb", rotationSpeed: 0.01, scale: 2, position: [20, 20, 20] },
+    { glb: "19.glb", rotationSpeed: 0.01, scale: 2, position: [20, 20, 20] },
     { glb: "1.glb", rotationSpeed: 0.01, scale: 2, position: [0, 0, 0] },
     {
       glb: "3.glb",
