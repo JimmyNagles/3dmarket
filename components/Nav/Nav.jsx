@@ -13,8 +13,8 @@ const Nav = () => {
   };
 
   return (
-    <div className=" sticky top-0 z-50 bg-white ">
-      <nav className="flex flex-row p-2 justify-between">
+    <div className=" sticky top-0 z-50 bg-white  ">
+      <nav className="flex flex-row p-2 justify-between ">
         {/* LOGO  */}
         <div className="flex flex-row p-2 ">
           <div href="/">
