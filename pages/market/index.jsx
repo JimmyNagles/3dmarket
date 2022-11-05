@@ -39,16 +39,16 @@ const Market = () => {
           <ThreeScene></ThreeScene>
         </div>
 
-        <div className="w-[85%] md:w-[85%] h-[90vh]   p-2 border-x-4 border-white">
+        {/* <div className="w-[85%] md:w-[85%] h-[90vh]   p-2 border-x-4 border-white">
           <ModelView glb="/models/18.glb"></ModelView>
-        </div>
+        </div> */}
 
         <div className="w-[85%] md:w-[85%] h-[90vh]   p-2 border-x-4 border-white">
           <ModelView glb="/models/19.glb"></ModelView>
         </div>
-        <div className="w-[85%] md:w-[85%] h-[90vh]   p-2 border-x-4 border-white">
+        {/* <div className="w-[85%] md:w-[85%] h-[90vh]   p-2 border-x-4 border-white">
           <ModelView glb="/models/99.glb"></ModelView>
-        </div>
+        </div> */}
         <div className="w-[85%] md:w-[85%] h-[90vh]   p-2 border-x-4 border-white">
           <ModelView glb="/models/97.glb"></ModelView>
         </div>
